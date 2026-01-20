@@ -36,3 +36,5 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+// 必须导出app，不能用app.listen()（Vercel会自动处理端口）
+module.exports = app;
