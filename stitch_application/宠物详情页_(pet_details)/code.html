@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddy - PawMate 宠物详情</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Font+Unspecified:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15", secondary: "#70BF8E", "surface-light": "#F7F2ED"}, fontFamily: {sans: ["Noto Sans SC", "Source Han Sans SC", "PingFang SC", "system-ui", "sans-serif"], display: "Font Unspecified"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-bottom-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b120e] dark:text-[#f3ebe7] font-sans">
+<div class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gradient-to-b from-black/30 to-transparent pointer-events-none">
+<button class="pointer-events-auto flex size-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white border border-white/20">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<button class="pointer-events-auto flex size-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white border border-white/20">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="relative pb-32">
+<div class="relative w-full aspect-[4/5] bg-[#f3ebe7] overflow-hidden">
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGVwNnkz0SSJ5LrzWcxFKF63xqVwFLqxkqbiN8YHtE7U52D7eC5eQNuudSwCkzvbc3s924SxR-gsttUdQ8lPAXbT4CTa52X4r0LvmMUnsXRm_lvOh34B0qScCuNdsBsf8g8Al7e2A1rqm6z_3YbpUNkWAM39BXxERLMWhHXn8yyGU_Y17rbzQttqR50PhrSvaBcDzIXQ2KDXNNr9qn88QeovRFdZvd79WhzUbdlH_1-ytwj3uP8JaET5a_WIlSVANkm2TvfJdCcUc');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+<div class="w-8 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+</div>
+</div>
+<div class="relative -mt-6 bg-background-light dark:bg-background-dark rounded-t-3xl px-5 pt-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h1 class="text-3xl font-black tracking-tight text-[#1b120e] dark:text-white">Buddy, 2岁</h1>
+<p class="text-[#97674e] dark:text-[#eb7e47]/80 text-lg font-bold mt-1">公 • 金毛寻回犬</p>
+</div>
+<div class="bg-primary/10 dark:bg-primary/20 text-primary p-2 rounded-xl">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+</div>
+<div class="flex gap-2 py-6 overflow-x-auto hide-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-secondary/15 px-4 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<p class="text-secondary text-sm font-bold">已接种疫苗</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-surface-light dark:bg-white/5 px-4 border border-[#e5ded9] dark:border-white/10">
+<span class="material-symbols-outlined text-[#1b120e] dark:text-[#f3ebe7] text-[20px]">check_circle</span>
+<p class="text-[#1b120e] dark:text-[#f3ebe7] text-sm font-bold">已绝育</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-surface-light dark:bg-white/5 px-4 border border-[#e5ded9] dark:border-white/10">
+<span class="material-symbols-outlined text-[#1b120e] dark:text-[#f3ebe7] text-[20px]">mood</span>
+<p class="text-[#1b120e] dark:text-[#f3ebe7] text-sm font-bold">性格亲人</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-surface-light dark:bg-white/5 px-4 border border-[#e5ded9] dark:border-white/10">
+<span class="material-symbols-outlined text-[#1b120e] dark:text-[#f3ebe7] text-[20px]">house</span>
+<p class="text-[#1b120e] dark:text-[#f3ebe7] text-sm font-bold">定点入厕</p>
+</div>
+</div>
+<div class="mt-2 mb-8">
+<h2 class="text-xl font-black mb-3 text-[#1b120e] dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                关于我
+            </h2>
+<div class="bg-surface-light dark:bg-white/5 p-5 rounded-2xl border border-[#e5ded9] dark:border-white/10">
+<p class="text-[#5c4033] dark:text-[#d1c2ba] leading-relaxed text-base font-medium">
+                    Buddy 是“好狗狗”的代名词。他性格温柔，最喜欢在公园里悠闲散步，也特别享受被摸肚子的时光。他与孩子和其他狗狗都能和谐相处，是陪伴家庭成长的完美伙伴。
+                    <br/><br/>
+                    他已经掌握了“坐下”和“待命”的指令，不过一旦看到网球，他可能会偶尔“失忆”！Buddy 正在寻找一个永远的家，希望成为你最忠诚的伴侣。
+                </p>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-xl font-black mb-3 text-[#1b120e] dark:text-white">所在地</h2>
+<div class="relative w-full h-32 rounded-2xl overflow-hidden grayscale opacity-80 border border-[#e5ded9] dark:border-white/10">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM18pp0jECcq9K2kcMsU6X3-eUYOcEcsxCmUCxeh2L5PFsd2Xf-TQhJzYz3Dc8PHUBDb0HhJ8CankdCWFhbEbzPE8DrUDO-ejiFBLHVEX27cc-e4il5EELtjxQLLfw4ThRq58cBd69ek8FNrvWx0CwB4wg23CTJ2BZpNcfmHmZbgWdkc_BG72UxQBA_qAYmxZPunnECcW4onHqWxMe08FCg9GpYrqzEuniQPY9M_kPY1vTeZW8uJlSNetpuUhh-Ua38II5nyfp-vk');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-white">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-2 left-3">
+<p class="text-xs font-bold text-white drop-shadow-md">桑尼维尔动物收容所, 加利福尼亚州</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/90 backdrop-blur-xl border-t border-[#e5ded9] dark:border-white/10 px-6 pt-4 pb-8 ios-bottom-safe z-50">
+<div class="flex gap-4 items-center">
+<button class="flex flex-col items-center justify-center size-14 shrink-0 rounded-2xl bg-surface-light dark:bg-white/10 text-[#1b120e] dark:text-white border border-[#e5ded9] dark:border-white/10">
+<span class="material-symbols-outlined text-[24px]">chat_bubble</span>
+<span class="text-[10px] font-black mt-0.5">咨询</span>
+</button>
+<button class="flex-1 h-14 bg-primary hover:bg-primary/90 text-white rounded-2xl font-black text-lg flex items-center justify-center shadow-lg shadow-primary/25 transition-transform active:scale-95">
+            领养我
+            <span class="material-symbols-outlined ml-2">favorite</span>
+</button>
+</div>
+</div>
+</body></html>

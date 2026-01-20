@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PawMate - 领养申请表</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Font+Unspecified:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15", "card-light": "#f7f2ed", "card-dark": "#2d1f19"}, fontFamily: {sans: ["Noto Sans SC", "Source Han Sans SC", "sans-serif"], display: "Font Unspecified"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .form-radio:checked {
+            background-color: #eb7e47;
+            border-color: #eb7e47;
+        }
+        .housing-option:has(input:checked) {
+            border-color: #eb7e47;
+            background-color: rgba(235, 126, 71, 0.05);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b120e] dark:text-[#fcf9f8] min-h-screen">
+<div class="max-w-[480px] mx-auto min-h-screen flex flex-col pb-10">
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-center text-lg font-bold leading-tight tracking-tight flex-1 mr-10">领养申请表</h2>
+</header>
+<div class="flex flex-col gap-3 px-6 py-4">
+<div class="flex gap-6 justify-between items-end">
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-widest text-primary/80">步骤 01</span>
+<p class="text-xl font-bold leading-normal">个人信息</p>
+</div>
+<p class="text-sm font-medium opacity-60">1/4</p>
+</div>
+<div class="rounded-full bg-[#e7d7d0] dark:bg-[#3d2d26] h-2 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 25%;"></div>
+</div>
+<p class="text-[#97674e] dark:text-[#bca194] text-sm font-medium">第一步：填写您的基本资料，让我们更了解您</p>
+</div>
+<div class="px-4 mt-2">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-5 shadow-sm border border-[#e7d7d0]/30 dark:border-[#3d2d26]">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                    关于您
+                </h3>
+<div class="mb-5">
+<label class="flex flex-col w-full">
+<p class="text-sm font-semibold mb-2 ml-1 opacity-80">您的姓名</p>
+<input class="form-input w-full rounded-lg border border-[#e7d7d0] dark:border-[#4d3d36] bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary h-14 px-4 text-base placeholder:text-[#97674e]/50" placeholder="请输入真实姓名" type="text"/>
+</label>
+</div>
+<div class="mb-5">
+<label class="flex flex-col w-full">
+<p class="text-sm font-semibold mb-2 ml-1 opacity-80">联系电话</p>
+<div class="relative">
+<input class="form-input w-full rounded-lg border border-[#e7d7d0] dark:border-[#4d3d36] bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary h-14 pl-4 pr-12 text-base placeholder:text-[#97674e]/50" placeholder="请输入手机号码" type="tel"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[#97674e]">
+<span class="material-symbols-outlined">call</span>
+</div>
+</div>
+</label>
+</div>
+<div class="mb-8">
+<label class="flex flex-col w-full">
+<p class="text-sm font-semibold mb-2 ml-1 opacity-80">居住地址</p>
+<div class="relative">
+<input class="form-input w-full rounded-lg border border-[#e7d7d0] dark:border-[#4d3d36] bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary h-14 pl-4 pr-12 text-base placeholder:text-[#97674e]/50" placeholder="请输入详细地址" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[#97674e]">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</label>
+</div>
+<div class="h-px bg-[#e7d7d0] dark:bg-[#3d2d26] mb-8"></div>
+<div class="mb-8">
+<p class="text-sm font-semibold mb-4 ml-1 opacity-80">您家中目前是否有其他宠物？</p>
+<div class="flex gap-4">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="hidden peer" name="has_pets" type="radio"/>
+<div class="flex items-center justify-center h-14 rounded-lg border-2 border-transparent bg-background-light dark:bg-background-dark text-center font-medium peer-checked:border-primary peer-checked:text-primary transition-all border-[#e7d7d0] dark:border-[#4d3d36]">
+                                是
+                            </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="hidden peer" name="has_pets" type="radio"/>
+<div class="flex items-center justify-center h-14 rounded-lg border-2 border-transparent bg-background-light dark:bg-background-dark text-center font-medium peer-checked:border-primary peer-checked:text-primary transition-all border-[#e7d7d0] dark:border-[#4d3d36]">
+                                否
+                            </div>
+</label>
+</div>
+</div>
+<div class="mb-4">
+<p class="text-sm font-semibold mb-4 ml-1 opacity-80">您的住房类型</p>
+<div class="grid grid-cols-2 gap-4">
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" name="housing" type="radio"/>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-[#e7d7d0] dark:border-[#4d3d36] bg-background-light dark:bg-background-dark peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2 text-primary">apartment</span>
+<span class="font-medium">公寓</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="housing" type="radio"/>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-[#e7d7d0] dark:border-[#4d3d36] bg-background-light dark:bg-background-dark peer-checked:border-primary peer-checked:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2 text-primary">potted_plant</span>
+<span class="font-medium">带院子住宅</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto px-4 pt-10 pb-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-95">
+                下一步
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-xs mt-4 opacity-50 px-8">
+                通过点击下一步，您同意 PawMate 的领养协议及个人信息保护政策。
+            </p>
+</div>
+<div class="fixed -bottom-6 -right-6 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[180px] text-primary rotate-12">pets</span>
+</div>
+</div>
+</body></html>

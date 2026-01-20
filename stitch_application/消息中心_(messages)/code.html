@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>消息中心 - PawMate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Font+Unspecified:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15", "card-light": "#F7F2ED", "card-dark": "#2d1f1a", "muted-beige": "#BFAAA1"}, fontFamily: {sans: ["Noto Sans SC", "Source Han Sans SC", "sans-serif"], display: "Font Unspecified"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b120e] dark:text-white min-h-screen font-sans">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4">
+<div class="flex items-center justify-between">
+<h1 class="text-3xl font-bold tracking-tight text-[#1b120e] dark:text-white">消息中心</h1>
+<div class="flex gap-3">
+<button class="size-10 flex items-center justify-center rounded-full bg-card-light dark:bg-card-dark text-primary">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full bg-card-light dark:bg-card-dark">
+<span class="material-symbols-outlined text-[#1b120e] dark:text-white">settings</span>
+</button>
+</div>
+</div>
+</header>
+<div class="px-6 py-2">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-center rounded-xl bg-card-light dark:bg-card-dark h-12 px-4 shadow-sm border border-[#F0E6DD] dark:border-[#3d2b24]">
+<span class="material-symbols-outlined text-muted-beige">search</span>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-base placeholder:text-muted-beige px-3 font-sans" placeholder="搜索联系人或宠物姓名" type="text"/>
+</div>
+</label>
+</div>
+<main class="flex-1 px-4 py-4 space-y-3">
+<div class="flex items-center gap-4 bg-white dark:bg-card-dark p-4 rounded-xl shadow-[0_4px_12px_rgba(235,126,71,0.05)] border border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIj-OMoJPUIv6ruErQdKJ5GNiLq2zmdQRZmdtHvGBK5eAuBbdptoo6NLIZkxPmbyp1bbizf570GDWU8wwSuUPrma2TdKaNwZP986rjaHuVCJe1tQjpEq2ROM7cXeKTXMVDPYxU_yqcSAAxwZtStOFU6XRYOxhQoKHqTGWUTnCLz0uuv07cuXyBoeyLZ1QxznVfSwkPbArQsfU_3Gy7m5wun7r1qP3x1m5ZuKSausNm-tGzJLRSQf4XABkcglqv3R_BxOoQXltffls");'>
+</div>
+<div class="absolute -top-1 -right-1 size-3.5 rounded-full bg-primary border-2 border-white dark:border-card-dark"></div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-base font-bold text-[#1b120e] dark:text-white truncate">阳光领养中心</h3>
+<span class="text-xs font-bold text-primary">刚刚</span>
+</div>
+<p class="text-sm font-medium text-muted-beige line-clamp-1">Buddy 已经准备好明天和你见面了！🐾</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-light/50 dark:bg-card-dark/40 p-4 rounded-xl border border-[#F0E6DD] dark:border-[#3d2b24] transition-all cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwTQ72hpl_WRgdMRJXXX4K-rwO9rqMtSXsuxK37n3jjHRIPYcQ5fugAE8xWXcRFKVMKN_anpuSY2YP7-NMRtohXaV-Adtpo97oKikiY3_GD06LPC1fESiLVdvwGKf4e0-QdyQnL9ypH69H5uKxUAmNOq0avpaxGiE4CZsbGaOQIDbOaon2wBeozBAZ-OaqgTZcJQsHX3CTqHkEWHVIx9TEGx1Ylk21Kl3cyi8X8RX_MoWqPjo05lbxx0oH1z9vDfw5MhsZeA31CJA");'>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-base font-bold text-[#1b120e] dark:text-white truncate">莎拉 (寄养家庭)</h3>
+<span class="text-xs text-muted-beige">1小时前</span>
+</div>
+<p class="text-sm text-muted-beige line-clamp-1">我已经把医疗记录文件上传到系统了。</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-light/50 dark:bg-card-dark/40 p-4 rounded-xl border border-[#F0E6DD] dark:border-[#3d2b24] transition-all cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAy1AcDEHLa2DBwU3dSeAZrvk-c4iOnZGJMFwZZ6PgR2uxMIbe1HZL6qAMokmWJvpwxoQch4UN7TV1qPrd3VXjmKMHVnvG29TMxwPcEZ34XNKweWd_tomJdLBINGvKHYeifPh0cATT8BsSBMSPnlShYj0WGKakPOOlVhRzT51sw0jtgozjhtZuRQT3Px2mxF9axWsETXofrZN5nC6qcn327Yucmdl2X900ojvbXyMEtDGL1NzDCSTIsEHuKY4BNYUjU5CyxqivgeCk");'>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-base font-bold text-[#1b120e] dark:text-white truncate">城市爪印救助站</h3>
+<span class="text-xs text-muted-beige">昨天</span>
+</div>
+<p class="text-sm text-muted-beige line-clamp-1">感谢您的申请！我们会尽快审核。</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-light/50 dark:bg-card-dark/40 p-4 rounded-xl border border-[#F0E6DD] dark:border-[#3d2b24] transition-all cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADXX9gUNNzy7-MDgm4hEDgP64vY_0ceZQ9AD0I4QG8hrFUWkv-lZ4RHXQN9Fso88SkfRoIe41AHe819sqOgp7eUxZOum7aRfkq5ugX_iE01QH-odQVrjZ_WMxBkqDTcKsxjSniYxirsoqofGm_BM2vk8pnjtG3gSirGim_OVewU59n-8huDCiGukx-k1qVAGoCPjrjHUv-3Jtz3RQN-7U9zmTmGQfAO4ZQERCsCUYAlagsYOWvKDAVu2_YkyNBjphSALAADEaHUb0");'>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-base font-bold text-[#1b120e] dark:text-white truncate">老王 (志愿者)</h3>
+<span class="text-xs text-muted-beige">周二</span>
+</div>
+<p class="text-sm text-muted-beige line-clamp-1">周边的环境考察报告已经发给你了。</p>
+</div>
+</div>
+<div class="pt-10 flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined text-6xl text-muted-beige mb-2">potted_plant</span>
+<p class="text-xs text-muted-beige uppercase tracking-widest font-bold">您的领养之旅从这里开始</p>
+</div>
+</main>
+<nav class="sticky bottom-0 w-full bg-white dark:bg-background-dark border-t border-[#F0E6DD] dark:border-[#3d2b24] px-8 py-4 flex justify-between items-center pb-8">
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-[#97674e] dark:text-muted-beige group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-bold text-muted-beige">首页</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-[#97674e] dark:text-muted-beige group-hover:text-primary transition-colors">pets</span>
+<span class="text-[10px] font-bold text-muted-beige">发现</span>
+</div>
+<div class="flex flex-col items-center gap-1 relative">
+<span class="material-symbols-outlined active-icon text-primary">chat_bubble</span>
+<span class="text-[10px] font-bold text-primary">消息</span>
+<div class="absolute -top-1 right-0 size-2 bg-primary rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-[#97674e] dark:text-muted-beige group-hover:text-primary transition-colors">person</span>
+<span class="text-[10px] font-bold text-muted-beige">我的</span>
+</div>
+</nav>
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-black/10 dark:bg-white/10 rounded-full"></div>
+</div>
+</body></html>
