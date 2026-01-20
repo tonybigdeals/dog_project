@@ -172,6 +172,7 @@ Vercel 会自动识别 `api/` 目录下的文件作为 serverless functions。
 - 后端 CORS 配置未允许前端域名
 - 预检请求（OPTIONS）未正确处理
 
+
 **解决方案**：
 1. 确认后端 `api/index.js` 中的 CORS 配置已正确设置
 2. 默认配置已允许：
