@@ -33,8 +33,12 @@ app.get('/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running' });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
-// 必须导出app，不能用app.listen()（Vercel会自动处理端口）
+// Vercel serverless 环境：只导出 app，不调用 app.listen()
+// 本地开发环境：需要启动服务器
+if (process.env.VERCEL !== '1') {
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
+}
+
 module.exports = app;
