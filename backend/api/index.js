@@ -20,8 +20,46 @@ const forumRoutes = require('../routes/forum');
 
 const app = express();
 
+// CORS 配置：允许 Vercel 前端域名和本地开发环境
+const corsOptions = {
+    origin: function (origin, callback) {
+        // 允许无 origin 的请求（如 Postman、移动应用等）
+        if (!origin) {
+            return callback(null, true);
+        }
+        
+        // 允许本地开发环境
+        if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:')) {
+            return callback(null, true);
+        }
+        
+        // 允许所有 Vercel 部署的前端域名（包含 wensons-projects-bb20578e.vercel.app）
+        if (origin.includes('wensons-projects-bb20578e.vercel.app') || 
+            origin.includes('vercel.app')) {
+            return callback(null, true);
+        }
+        
+        // 允许通过环境变量配置的额外域名
+        const allowedOrigins = process.env.ALLOWED_ORIGINS 
+            ? process.env.ALLOWED_ORIGINS.split(',') 
+            : [];
+        
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
+        
+        // 拒绝其他来源
+        callback(new Error('Not allowed by CORS'));
+    },
+    credentials: true, // 允许携带凭证（cookies、authorization headers）
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    exposedHeaders: ['Content-Range', 'X-Content-Range'],
+    maxAge: 86400 // 预检请求缓存时间（24小时）
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes (注意：这里不需要 /api 前缀，因为 Vercel 已经去掉了)

@@ -164,7 +164,27 @@ Vercel 会自动识别 `api/` 目录下的文件作为 serverless functions。
 2. 推荐使用 `SUPABASE_SERVICE_ROLE_KEY`（绕过 RLS）
 3. 检查 Supabase Dashboard 中的 RLS 策略
 
-### 5. 本地开发正常，部署后失败
+### 5. CORS 跨域错误
+
+**症状**：浏览器控制台显示 `Access-Control-Allow-Origin` 错误，请求被阻止
+
+**可能原因**：
+- 后端 CORS 配置未允许前端域名
+- 预检请求（OPTIONS）未正确处理
+
+**解决方案**：
+1. 确认后端 `api/index.js` 中的 CORS 配置已正确设置
+2. 默认配置已允许：
+   - 所有 `vercel.app` 域名
+   - 所有包含 `wensons-projects-bb20578e.vercel.app` 的域名
+   - 本地开发环境（`http://localhost:*`）
+3. 如需添加其他域名，可在 Vercel 环境变量中配置 `ALLOWED_ORIGINS`（逗号分隔）：
+   ```
+   ALLOWED_ORIGINS=https://example.com,https://another-domain.com
+   ```
+4. 重新部署后端项目
+
+### 6. 本地开发正常，部署后失败
 
 **可能原因**：
 - 环境变量未在 Vercel 中配置
