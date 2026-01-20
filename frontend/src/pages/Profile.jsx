@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BottomNav from '../components/BottomNav';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-
-const API_BASE_URL = 'http://localhost:5001/api';
+import { API_BASE_URL } from '../config/api';
 
 const Profile = () => {
     const { user, logout } = useAuth();

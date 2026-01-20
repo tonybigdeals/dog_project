@@ -1,9 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
+import { API_BASE_URL } from '../config/api';
 
 const DogContext = createContext();
-
-const API_BASE_URL = 'http://localhost:5001/api';
 
 export const DogProvider = ({ children }) => {
     const { user } = useAuth();

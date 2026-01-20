@@ -6,8 +6,7 @@ import CategoryFilter from '../components/Forum/CategoryFilter';
 import SortSelector from '../components/Forum/SortSelector';
 import { categories, sortOptions } from '../data/mockForum';
 import { useAuth } from '../context/AuthContext';
-
-const API_BASE_URL = 'http://localhost:5001/api';
+import { API_BASE_URL } from '../config/api';
 
 const Forum = () => {
   const navigate = useNavigate();

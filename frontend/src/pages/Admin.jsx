@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../config/api';
 
 const Admin = () => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Admin = () => {
 
     const fetchApplications = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/applications');
+            const response = await fetch(`${API_BASE_URL}/applications`);
             const data = await response.json();
             setApplications(data);
         } catch (error) {
@@ -27,7 +28,7 @@ const Admin = () => {
 
     const handleApprove = async (applicationId, userId, dogName) => {
         try {
-            const response = await fetch(`http://localhost:5001/api/applications/${applicationId}/approve`, {
+            const response = await fetch(`${API_BASE_URL}/applications/${applicationId}/approve`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, dogName })
@@ -45,7 +46,7 @@ const Admin = () => {
 
     const handleReject = async (applicationId, userId, dogName) => {
         try {
-            const response = await fetch(`http://localhost:5001/api/applications/${applicationId}/reject`, {
+            const response = await fetch(`${API_BASE_URL}/applications/${applicationId}/reject`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, dogName })

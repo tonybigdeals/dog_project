@@ -4,8 +4,7 @@ import BottomNav from '../components/BottomNav';
 import CommentItem from '../components/Forum/CommentItem';
 import { formatTime } from '../data/mockForum';
 import { useAuth } from '../context/AuthContext';
-
-const API_BASE_URL = 'http://localhost:5001/api';
+import { API_BASE_URL } from '../config/api';
 
 const ForumDetail = () => {
   const { id } = useParams();

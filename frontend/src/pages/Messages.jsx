@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import BottomNav from '../components/BottomNav';
+import { API_BASE_URL } from '../config/api';
 
 const Messages = () => {
     const { user } = useAuth();
@@ -15,7 +16,7 @@ const Messages = () => {
         if (!user) return;
 
         try {
-            const response = await fetch(`http://localhost:5001/api/messages/${user.id}`);
+            const response = await fetch(`${API_BASE_URL}/messages/${user.id}`);
             const data = await response.json();
             setMessages(data);
         } catch (error) {

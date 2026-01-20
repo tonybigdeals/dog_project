@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../config/api';
 
 const Application = () => {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Application = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:5001/api/applications', {
+            const response = await fetch(`${API_BASE_URL}/applications`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
