@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "engines": {
-    "node": ">=20.19.4"
+    "node": "20.18.0",
+    "npm": "10.2.3"
   },
   "dependencies": {
     "clsx": "^2.1.1",
