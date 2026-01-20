@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>个人中心 - PawMate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Font+Unspecified:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15"}, fontFamily: {sans: ["Noto Sans SC", "sans-serif"], display: "Font Unspecified"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 25px -5px rgba(235, 126, 71, 0.05), 0 8px 10px -6px rgba(235, 126, 71, 0.05);
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b120e] dark:text-white min-h-screen font-display">
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-[28px]">settings</span>
+</div>
+<h2 class="text-[#1b120e] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">个人中心</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="relative flex items-center justify-center rounded-xl h-12 w-12 bg-transparent text-[#1b120e] dark:text-white">
+<span class="material-symbols-outlined text-[28px]">notifications</span>
+<span class="absolute top-2.5 right-2.5 flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white dark:border-[#2d1e18] shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnyCbPkHaqVhl20l_uOiYaedgNE7IHr2N40Rx4bfwA7cyy-yB9wSbAx4LQnecLiv9KhP0owjiC5laFu_oQ3yLKDPqI5E7xrskwWdjBAH2m9zv-FsxrvgmgJW9QlP_DfRXOp4G2ZLGFZQLZEimczVneStODNogQF2R3ThkGopvRaEQ_Sv7srEP00BLiS2D-7m2U9y7wzeDUG3IQInvB5W67lN03goakvkeqbyjCjxHPZg8t1moUoAV3o6Kir27BEr11h9j_am2cJOw");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white rounded-full p-1.5 border-2 border-white dark:border-[#2d1e18]">
+<span class="material-symbols-outlined text-[16px] block">edit</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#1b120e] dark:text-white text-[24px] font-bold leading-tight tracking-tight text-center">小王 (PawMate 领养人)</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-sm">calendar_today</span>
+<p class="text-[#97674e] dark:text-[#bfaaa1] text-sm font-medium leading-normal text-center">加入 PawMate 第 125 天</p>
+</div>
+<p class="text-[#97674e] dark:text-[#bfaaa1] text-sm font-normal leading-normal text-center mt-2 italic">“愿每一只狗狗都有温暖的家”</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-2">
+<div class="flex gap-3 bg-white dark:bg-[#2d1e18] p-4 rounded-xl custom-shadow border border-[#f3ebe7] dark:border-[#3d2a21]">
+<div class="flex flex-1 flex-col gap-1 items-center text-center">
+<p class="text-primary tracking-tight text-2xl font-bold">24</p>
+<p class="text-[#97674e] dark:text-[#bfaaa1] text-xs font-bold tracking-wider">我的收藏</p>
+</div>
+<div class="w-[1px] bg-[#e7d7d0] dark:bg-[#3d2a21] my-2"></div>
+<div class="flex flex-1 flex-col gap-1 items-center text-center">
+<p class="text-[#1b120e] dark:text-white tracking-tight text-2xl font-bold">3</p>
+<p class="text-[#97674e] dark:text-[#bfaaa1] text-xs font-bold tracking-wider">已申请</p>
+</div>
+<div class="w-[1px] bg-[#e7d7d0] dark:bg-[#3d2a21] my-2"></div>
+<div class="flex flex-1 flex-col gap-1 items-center text-center">
+<p class="text-[#1b120e] dark:text-white tracking-tight text-2xl font-bold">12</p>
+<p class="text-[#97674e] dark:text-[#bfaaa1] text-xs font-bold tracking-wider">线下看狗</p>
+</div>
+</div>
+</div>
+<div class="mt-6 mb-24 px-4 space-y-4">
+<div class="bg-white dark:bg-[#2d1e18] rounded-xl overflow-hidden custom-shadow border border-[#f3ebe7] dark:border-[#3d2a21]">
+<h3 class="text-[#1b120e] dark:text-white text-xs font-bold leading-tight tracking-wider px-4 pt-5 pb-2 opacity-50">领养管理</h3>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">领养进度</p>
+<p class="text-primary text-[11px] font-bold">1 个新提醒</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] bg-background-light dark:bg-background-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-[#1b120e] dark:text-white flex items-center justify-center rounded-lg bg-[#f3ebe7] dark:bg-[#3d2a21] shrink-0 size-10">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">我的收藏犬只</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#2d1e18] rounded-xl overflow-hidden custom-shadow border border-[#f3ebe7] dark:border-[#3d2a21]">
+<h3 class="text-[#1b120e] dark:text-white text-xs font-bold leading-tight tracking-wider px-4 pt-5 pb-2 opacity-50">互动与支持</h3>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-[#1b120e] dark:text-white flex items-center justify-center rounded-lg bg-[#f3ebe7] dark:bg-[#3d2a21] shrink-0 size-10">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">消息历史</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] bg-background-light dark:bg-background-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-[#1b120e] dark:text-white flex items-center justify-center rounded-lg bg-[#f3ebe7] dark:bg-[#3d2a21] shrink-0 size-10">
+<span class="material-symbols-outlined">help_center</span>
+</div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">帮助中心</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] bg-background-light dark:bg-background-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-[#1b120e] dark:text-white flex items-center justify-center rounded-lg bg-[#f3ebe7] dark:bg-[#3d2a21] shrink-0 size-10">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">隐私与协议</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] bg-background-light dark:bg-background-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[64px] justify-between cursor-pointer active:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-[#1b120e] dark:text-white flex items-center justify-center rounded-lg bg-[#f3ebe7] dark:bg-[#3d2a21] shrink-0 size-10">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<p class="text-[#1b120e] dark:text-white text-base font-semibold leading-normal">设置</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-[#97674e] dark:text-[#bfaaa1]">chevron_right</span>
+</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-white dark:bg-[#2d1e18] text-[#e54b4b] font-bold py-4 rounded-xl custom-shadow border border-[#f3ebe7] dark:border-[#3d2a21] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">logout</span>
+            退出登录
+        </button>
+</div>
+<div class="fixed bottom-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-[#f3ebe7] dark:border-[#3d2a21] px-6 py-3 pb-8 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">首页</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">发现</span>
+</div>
+<div class="flex flex-col items-center gap-1 bg-primary text-white p-3 rounded-full -mt-12 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-bold">社区</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-[10px] font-bold">我的</span>
+</div>
+</div>
+<div class="fixed top-0 right-0 -z-10 opacity-[0.03] pointer-events-none rotate-12">
+<span class="material-symbols-outlined text-[300px] text-primary">pets</span>
+</div>
+</body></html>
