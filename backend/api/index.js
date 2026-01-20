@@ -40,5 +40,16 @@ app.get('/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running' });
 });
 
+// 调试：捕获所有未匹配的路由
+app.use((req, res, next) => {
+    console.log(`[API] Unmatched route: ${req.method} ${req.path}`);
+    res.status(404).json({ 
+        error: 'Route not found', 
+        method: req.method, 
+        path: req.path,
+        originalUrl: req.originalUrl
+    });
+});
+
 // 导出为 Vercel serverless function handler
 module.exports = app;

@@ -104,21 +104,43 @@ Vercel 会自动识别 `api/` 目录下的文件作为 serverless functions。
 
 ## 常见问题排查
 
-### 1. 404 错误
+### 1. 前端刷新页面 404 错误
+
+**症状**：刷新前端页面（如 `/login`）时返回 404
+
+**原因**：SPA (Single Page Application) 路由问题。刷新时服务器尝试查找 `/login` 文件，但这是前端路由。
+
+**解决方案**：
+1. 确认 `frontend/vercel.json` 文件存在，内容如下：
+```json
+{
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+2. 重新部署前端项目
+
+### 2. 后端 API 404 错误
 
 **症状**：所有 `/api/*` 请求返回 404
 
 **可能原因**：
 - `api/index.js` 文件不存在或路径错误
 - Root Directory 配置不正确
-- 路由配置问题
+- 路由配置问题（路径前缀不匹配）
 
 **解决方案**：
 1. 确认 `backend/api/index.js` 文件存在
-2. 检查 Vercel 项目设置中的 Root Directory
-3. 查看部署日志，确认文件是否正确上传
+2. 检查 Vercel 项目设置中的 Root Directory（应设置为 `backend`）
+3. 确认 `api/index.js` 中的路由**不包含** `/api` 前缀（Vercel 会自动去掉）
+4. 查看部署日志，确认文件是否正确上传
+5. 测试健康检查端点：`GET /api/health`
 
-### 2. 环境变量缺失错误
+### 3. 环境变量缺失错误
 
 **症状**：日志显示 `ERROR: SUPABASE_URL missing`
 
@@ -128,7 +150,7 @@ Vercel 会自动识别 `api/` 目录下的文件作为 serverless functions。
 3. 确认环境变量已应用到正确的环境（Production/Preview/Development）
 4. 重新部署项目
 
-### 3. Supabase 连接失败
+### 4. Supabase 连接失败
 
 **症状**：API 返回数据库相关错误
 
@@ -142,7 +164,7 @@ Vercel 会自动识别 `api/` 目录下的文件作为 serverless functions。
 2. 推荐使用 `SUPABASE_SERVICE_ROLE_KEY`（绕过 RLS）
 3. 检查 Supabase Dashboard 中的 RLS 策略
 
-### 4. 本地开发正常，部署后失败
+### 5. 本地开发正常，部署后失败
 
 **可能原因**：
 - 环境变量未在 Vercel 中配置
