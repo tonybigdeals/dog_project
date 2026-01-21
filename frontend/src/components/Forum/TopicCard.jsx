@@ -5,14 +5,21 @@ import { formatTime } from '../../data/mockForum';
 const TopicCard = ({ topic }) => {
   const navigate = useNavigate();
 
-  // 根据话题ID生成不同的高度比例，形成错落效果
-  const aspectRatios = ['aspect-[3/4]', 'aspect-[4/5]', 'aspect-[5/6]'];
-  const aspectRatio = aspectRatios[topic.id % 3];
+  // 根据话题ID生成不同的高度比例，形成明显的错落效果
+  // 使用差异更大的比例：短、中、长
+  const aspectRatios = [
+    'aspect-[2/3]',    // 0.667 - 较短
+    'aspect-[3/4]',    // 0.75 - 中等
+    'aspect-[1/1]',    // 1.0 - 正方形
+    'aspect-[4/3]',    // 1.333 - 较长
+    'aspect-[3/5]'     // 0.6 - 更短
+  ];
+  const aspectRatio = aspectRatios[topic.id % aspectRatios.length];
 
   return (
     <div
       onClick={() => navigate(`/forum/${topic.id}`)}
-      className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer transition-all duration-300 active:scale-[0.98]"
+      className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer transition-all duration-300 active:scale-[0.98] w-full"
     >
       {/* 主图 - 不同比例形成瀑布流效果 */}
       {topic.images && topic.images.length > 0 ? (

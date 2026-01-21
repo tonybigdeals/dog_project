@@ -142,9 +142,11 @@ const Forum = () => {
             )}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-2">
+          <div className="columns-2 gap-2 space-y-2">
             {topics.map(topic => (
-              <TopicCard key={topic.id} topic={topic} />
+              <div key={topic.id} className="break-inside-avoid mb-2">
+                <TopicCard topic={topic} />
+              </div>
             ))}
           </div>
         )}
